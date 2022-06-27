@@ -1,0 +1,20 @@
+.modal {
+    display: flex;
+    max-width: 960px;
+    width: 80%;
+    height: 400px;
+    background: #F5FDF5;
+    border-radius: 4px;
+    padding: 24px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    justify-content: center;
+    align-items: center;
+
+    .close {
+        position: absolute;
+        top: 24px;
+        right: 24px;
+        cursor: pointer;
+    }
+}

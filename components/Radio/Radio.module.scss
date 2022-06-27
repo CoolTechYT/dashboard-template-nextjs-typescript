@@ -1,0 +1,35 @@
+.radio {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    .label {
+        font-size: 16px;
+        font-weight: 500;
+        color: #000;
+        margin-bottom: 4px;
+        cursor: default;
+    }
+
+    .options {
+        display: flex;
+        gap: 16px;
+    }
+
+    .option {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        
+        label {
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 500;
+            color: #000;
+        }
+
+        input {
+            cursor: pointer;
+        }
+    }
+}

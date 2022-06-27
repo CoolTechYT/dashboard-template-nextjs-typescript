@@ -1,0 +1,50 @@
+$success-color: #63B877;
+$error-color: #FB4B4E;
+
+.toast {
+    display: flex;
+    align-items: center;
+    padding: 8px 24px;
+    background: #fff;
+    cursor: pointer;
+    transition: 0.25s;
+    animation: fadeIn 0.25s;
+}
+
+.toast.success {
+    border: 2px solid $success-color;
+    background: $success-color;
+    color: #fff;
+
+    &:hover {
+        border-color: lighten($success-color, 10%);
+        background: lighten($success-color, 10%);
+    }
+}
+
+.toast.error {
+    border: 2px solid $error-color;
+    background: $error-color;
+    color: #fff;
+}
+
+.toast.error:hover {
+    border-color: lighten($error-color, 10%);
+    background: lighten($error-color, 10%);
+}
+
+.toast.info {
+    border: 2px solid #EFECE8;
+    background: #fff;
+    color: #000;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

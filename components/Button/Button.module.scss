@@ -1,0 +1,60 @@
+$button-color: #F0ECE9;
+$button-color-primary: #FB4B4E;
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    padding: 8px 24px;
+    background: $button-color;
+    color: #000;
+    transition: 0.25s;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.button:disabled {
+    background: lighten($button-color, 3%);
+    color: lighten(#000, 50%);
+    cursor: default;
+}
+
+.button:hover {
+    background: lighten($button-color, 3%);
+}
+
+.button.primary {
+    background: $button-color-primary;
+    color: #fff;
+}
+
+.button.primary:hover {
+    background: lighten($button-color-primary, 10%);
+}
+
+.button.primary:disabled {
+    background: lighten($button-color-primary, 10%);
+    color: lighten(#fff, 50%);
+}
+
+.button.loading::after {
+    content: "";
+    display: block;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    border-top: 2px solid #000;
+    animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
